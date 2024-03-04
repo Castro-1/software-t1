@@ -2,18 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Comment extends Model
 {
-    use HasFactory;
-
     /**
-     * PRODUCT ATTRIBUTES
-     * $this->attributes['id'] - int - contains the product primary key (id)
+     * COMMENT ATTRIBUTES
+     * $this->attributes['id'] - int - contains the comment primary key (id)
      * $this->attributes['description'] - string - contains the comment description
+     * $this->attributes['product_id'] - int - contains the associated product primary key (id)
      * $this->product - Product - contains the associated Product
      */
     protected $fillable = ['description', 'product_id'];
